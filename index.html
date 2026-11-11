@@ -52,21 +52,19 @@
     }
 
     .page {
-      width: min(1120px, calc(100% - 64px));
+      width: min(760px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 88px 0 56px;
+      padding: 72px 0 48px;
     }
 
     .layout {
-      display: grid;
-      grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
-      gap: clamp(64px, 9vw, 132px);
-      align-items: start;
+      display: block;
     }
 
     .profile {
-      position: sticky;
-      top: 48px;
+      position: static;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--line);
     }
 
     .eyebrow {
@@ -79,17 +77,17 @@
     }
 
     h1 {
-      max-width: 10ch;
+      max-width: none;
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.65rem, 5vw, 4.6rem);
+      font-size: clamp(2.2rem, 5vw, 3.25rem);
       font-weight: 400;
-      letter-spacing: -0.045em;
-      line-height: 0.98;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
     }
 
     .role {
-      margin: 28px 0 0;
+      margin: 20px 0 0;
       font-size: 1rem;
       line-height: 1.55;
     }
@@ -125,6 +123,7 @@
 
     main {
       min-width: 0;
+      padding-top: 48px;
     }
 
     section {
@@ -133,7 +132,7 @@
     }
 
     section + section {
-      padding-top: 48px;
+      padding-top: 42px;
     }
 
     section:last-child {
@@ -152,10 +151,10 @@
     .lead {
       max-width: 720px;
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.55rem, 2.5vw, 2.05rem);
-      line-height: 1.48;
-      letter-spacing: -0.015em;
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.75;
+      letter-spacing: 0;
     }
 
     .education {
@@ -168,8 +167,8 @@
 
     .education li {
       display: grid;
-      grid-template-columns: 118px 1fr;
-      gap: 24px;
+      grid-template-columns: 1fr;
+      gap: 3px;
     }
 
     .education .date {
@@ -192,28 +191,29 @@
     }
 
     .interests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      display: block;
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
     .interests li {
-      padding: 7px 13px;
-      border: 1px solid #cddce3;
-      border-radius: 999px;
-      background: var(--soft-blue);
-      color: var(--blue-dark);
-      font-size: 0.87rem;
-      line-height: 1.35;
+      display: inline;
+      color: var(--ink);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .interests li:not(:last-child)::after {
+      content: " · ";
+      color: var(--muted);
     }
 
     .links {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px 34px;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      max-width: 420px;
       margin: 0;
       padding: 0;
       list-style: none;
@@ -248,8 +248,7 @@
       }
 
       .layout {
-        grid-template-columns: 1fr;
-        gap: 68px;
+        display: block;
       }
 
       .profile {
@@ -257,16 +256,7 @@
       }
 
       h1 {
-        max-width: 12ch;
-      }
-
-      .education li {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .links {
-        grid-template-columns: 1fr;
+        max-width: none;
       }
     }
 
