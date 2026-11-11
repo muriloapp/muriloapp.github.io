@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of Murilo André Peres Pereira, PhD student in Financial Engineering at HEC Montréal.">
+  <meta name="theme-color" content="#f7f5f1">
+  <title>Murilo André Peres Pereira</title>
+  <style>
+    :root {
+      --paper: #f7f5f1;
+      --ink: #17212b;
+      --muted: #5e6871;
+      --blue: #14628b;
+      --blue-dark: #0c4766;
+      --line: #d9d7d2;
+      --soft-blue: #e8f1f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--blue-dark);
+    }
+
+    a:focus-visible {
+      outline: 3px solid #92bfd5;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 64px));
+      margin: 0 auto;
+      padding: 88px 0 56px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
+      gap: clamp(64px, 9vw, 132px);
+      align-items: start;
+    }
+
+    .profile {
+      position: sticky;
+      top: 48px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--blue);
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 10ch;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.65rem, 5vw, 4.6rem);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+    }
+
+    .role {
+      margin: 28px 0 0;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .role strong {
+      display: block;
+      font-weight: 650;
+    }
+
+    .location {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .contact {
+      display: grid;
+      gap: 8px;
+      margin-top: 34px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact a,
+    .contact span {
+      width: fit-content;
+      font-size: 0.91rem;
+    }
+
+    .contact .unavailable {
+      color: var(--muted);
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    section {
+      padding: 0 0 52px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section + section {
+      padding-top: 48px;
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      color: var(--blue);
+      font-size: 0.79rem;
+      font-weight: 750;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.55rem, 2.5vw, 2.05rem);
+      line-height: 1.48;
+      letter-spacing: -0.015em;
+    }
+
+    .education {
+      display: grid;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .education li {
+      display: grid;
+      grid-template-columns: 118px 1fr;
+      gap: 24px;
+    }
+
+    .education .date {
+      color: var(--muted);
+      font-size: 0.86rem;
+      letter-spacing: 0.02em;
+    }
+
+    .education h3 {
+      margin: 0 0 4px;
+      font-size: 1.02rem;
+      font-weight: 680;
+      line-height: 1.45;
+    }
+
+    .education p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .interests li {
+      padding: 7px 13px;
+      border: 1px solid #cddce3;
+      border-radius: 999px;
+      background: var(--soft-blue);
+      color: var(--blue-dark);
+      font-size: 0.87rem;
+      line-height: 1.35;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 34px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+    }
+
+    .links a::after {
+      content: "↗";
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 38px, 680px);
+        padding-top: 52px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 68px;
+      }
+
+      .profile {
+        position: static;
+      }
+
+      h1 {
+        max-width: 12ch;
+      }
+
+      .education li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="layout">
+      <header class="profile">
+        <p class="eyebrow">Academic homepage</p>
+        <h1>Murilo André Peres Pereira</h1>
+        <p class="role">
+          <strong>PhD Student in Financial Engineering</strong>
+          HEC Montréal
+        </p>
+        <p class="location">Montréal, Québec, Canada</p>
+
+        <nav class="contact" aria-label="Contact and profiles">
+          <a href="mailto:murilo-andre.peres-pereira@hec.ca">Email</a>
+          <a href="https://www.gerad.ca/en/people/murilo-andre-peres-pereira">GERAD profile</a>
+          <a href="https://www.linkedin.com/in/muriloapp">LinkedIn</a>
+          <a href="https://github.com/muriloapp">GitHub</a>
+          <span class="unavailable">CV — available soon</span>
+        </nav>
+      </header>
+
+      <main>
+        <section aria-labelledby="research-title">
+          <h2 id="research-title">Research</h2>
+          <p class="lead">My research lies at the intersection of financial econometrics, machine learning, and risk management. I develop statistical methods for estimation, inference, and forecasting, with a particular interest in multivariate extremes, heavy-tailed processes, and high-dimensional problems.</p>
+        </section>
+
+        <section aria-labelledby="education-title">
+          <h2 id="education-title">Education</h2>
+          <ul class="education">
+            <li>
+              <span class="date">2024—present</span>
+              <div>
+                <h3>PhD in Administration — Financial Engineering</h3>
+                <p>HEC Montréal</p>
+              </div>
+            </li>
+            <li>
+              <span class="date">2020—2022</span>
+              <div>
+                <h3>MSc in Economics</h3>
+                <p>São Paulo School of Economics, Fundação Getulio Vargas (FGV EESP)</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="interests-title">
+          <h2 id="interests-title">Research interests</h2>
+          <ul class="interests">
+            <li>Financial econometrics</li>
+            <li>Multivariate extremes</li>
+            <li>Heavy-tailed processes</li>
+            <li>Machine learning</li>
+            <li>Risk management</li>
+            <li>High-dimensional statistics</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="links-title">
+          <h2 id="links-title">Contact &amp; links</h2>
+          <ul class="links">
+            <li><a href="mailto:murilo-andre.peres-pereira@hec.ca">Academic email</a></li>
+            <li><a href="https://www.gerad.ca/en/people/murilo-andre-peres-pereira">GERAD</a></li>
+            <li><a href="https://www.linkedin.com/in/muriloapp">LinkedIn</a></li>
+            <li><a href="https://github.com/muriloapp">GitHub</a></li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer>© 2026 Murilo André Peres Pereira</footer>
+  </div>
+</body>
+</html>
