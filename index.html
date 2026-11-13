@@ -11,7 +11,8 @@
       --text: #1b1b1b;
       --muted: #646464;
       --link: #1d5075;
-      --paper: #003b5c;
+      --paper: #005a84;
+      --paper-gap: 4px;
       --rule: #e5e5e5;
     }
 
@@ -118,7 +119,7 @@
     }
 
     .paper-title {
-      margin: 0 0 5px;
+      margin: 0 0 var(--paper-gap);
       color: var(--paper);
       font-size: 0.92rem;
       font-weight: 600;
@@ -128,14 +129,14 @@
     .paper-title a {
       color: var(--paper);
       text-decoration: underline;
-      text-decoration-color: #718b9d;
+      text-decoration-color: #6d98b0;
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
 
     .paper-title a:hover {
-      color: #002a43;
-      text-decoration-color: #002a43;
+      color: #003f5e;
+      text-decoration-color: #003f5e;
     }
 
     .paper-meta {
@@ -143,6 +144,10 @@
       color: var(--muted);
       font-size: 0.92rem;
       line-height: 1.5;
+    }
+
+    .paper-meta + .paper-meta {
+      margin-top: var(--paper-gap);
     }
 
     footer {
