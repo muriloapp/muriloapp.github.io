@@ -91,10 +91,7 @@
     }
 
     h2 {
-      display: inline-block;
       margin: 0 0 18px;
-      padding-bottom: 2px;
-      border-bottom: 1px solid var(--text);
       font-size: 1.18rem;
       font-weight: 650;
       letter-spacing: -0.01em;
@@ -119,13 +116,6 @@
       margin-top: 14px;
     }
 
-    .paper-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 18px;
-      align-items: baseline;
-    }
-
     .paper-title {
       margin: 0 0 2px;
       font-size: 1.02rem;
@@ -146,23 +136,19 @@
       text-decoration-color: var(--link);
     }
 
-    .paper-meta,
-    .venue {
+    .paper-meta {
       margin: 0;
       color: var(--muted);
       font-size: 0.92rem;
       line-height: 1.5;
     }
 
-    .venue {
-      font-style: italic;
+    .publication-details {
+      font-weight: 400;
     }
 
-    .paper-date {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.86rem;
-      font-variant-numeric: tabular-nums;
+    .publication-details em {
+      font-style: italic;
     }
 
     footer {
@@ -190,11 +176,6 @@
       .contact a + a::before {
         content: none;
       }
-
-      .paper-row {
-        grid-template-columns: 1fr;
-        gap: 1px;
-      }
     }
   </style>
 </head>
@@ -214,40 +195,30 @@
 
     <main>
       <section aria-labelledby="interests-title">
-        <h2 id="interests-title">Research interests</h2>
+        <h2 id="interests-title">Research Interests</h2>
         <p class="interests">Financial econometrics · Extreme value analysis · Risk management · High-dimensional statistics</p>
       </section>
 
       <section aria-labelledby="working-papers-title">
-        <h2 id="working-papers-title">Working papers</h2>
+        <h2 id="working-papers-title">Working Papers</h2>
         <ol class="paper-list">
           <li>
-            <div class="paper-row">
-              <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7462758">Sequential learning of multivariate dependence for systemic risk</a></h3>
-              <time class="paper-date" datetime="2026">2026</time>
-            </div>
+            <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7462758">Sequential learning of multivariate dependence for systemic risk</a></h3>
             <p class="paper-meta">with David Ardia and Debbie J. Dupuis</p>
           </li>
           <li>
-            <div class="paper-row">
-              <h3 class="paper-title">Peer Performance: Luck-Corrected Peer Performance Analysis in R</h3>
-              <time class="paper-date" datetime="2026">2026</time>
-            </div>
+            <h3 class="paper-title">Peer Performance: Luck-Corrected Peer Performance Analysis in R</h3>
             <p class="paper-meta">with David Ardia and Benjamin Seguin</p>
           </li>
         </ol>
       </section>
 
       <section aria-labelledby="publication-title">
-        <h2 id="publication-title">Publication</h2>
+        <h2 id="publication-title">Publications</h2>
         <ol class="paper-list">
           <li>
-            <div class="paper-row">
-              <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S106297692500081X">Forecasting realized volatility using news flow</a></h3>
-              <time class="paper-date" datetime="2025">2025</time>
-            </div>
+            <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S106297692500081X">Forecasting realized volatility using news flow</a><span class="publication-details"> - <em>The Quarterly Review of Economics and Finance</em>, 2025</span></h3>
             <p class="paper-meta">with Marcelo Fernandes</p>
-            <p class="venue">The Quarterly Review of Economics and Finance, Volume 104</p>
           </li>
         </ol>
       </section>
