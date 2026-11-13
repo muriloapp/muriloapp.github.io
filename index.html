@@ -10,7 +10,8 @@
     :root {
       --text: #1b1b1b;
       --muted: #646464;
-      --link: #1d5075;
+      --link: #00549f;
+      --accent: #00549f;
       --rule: #e5e5e5;
     }
 
@@ -92,6 +93,7 @@
 
     h2 {
       margin: 0 0 18px;
+      color: var(--accent);
       font-size: 1.18rem;
       font-weight: 650;
       letter-spacing: -0.01em;
@@ -113,20 +115,21 @@
     }
 
     .paper-list li + li {
-      margin-top: 14px;
+      margin-top: 18px;
     }
 
     .paper-title {
-      margin: 0 0 2px;
-      font-size: 1.02rem;
+      margin: 0 0 5px;
+      color: var(--accent);
+      font-size: 0.92rem;
       font-weight: 600;
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
     .paper-title a {
-      color: var(--text);
+      color: var(--accent);
       text-decoration: underline;
-      text-decoration-color: #aebbc5;
+      text-decoration-color: #89b6d8;
       text-decoration-thickness: 1px;
       text-underline-offset: 4px;
     }
@@ -205,16 +208,6 @@
         </ol>
       </section>
 
-      <section aria-labelledby="work-in-progress-title">
-        <h2 id="work-in-progress-title">Working in Progress</h2>
-        <ol class="paper-list">
-          <li>
-            <h3 class="paper-title">High-Dimensional Factor Models for Financial Extremes</h3>
-            <p class="paper-meta">with David Ardia and Debbie J. Dupuis</p>
-          </li>
-        </ol>
-      </section>
-
       <section aria-labelledby="publication-title">
         <h2 id="publication-title">Publications</h2>
         <ol class="paper-list">
@@ -222,6 +215,16 @@
             <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S106297692500081X">Forecasting realized volatility using news flow</a></h3>
             <p class="paper-meta">with Marcelo Fernandes</p>
             <p class="paper-meta"><em>The Quarterly Review of Economics and Finance</em>, 2025</p>
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="work-in-progress-title">
+        <h2 id="work-in-progress-title">Work in Progress</h2>
+        <ol class="paper-list">
+          <li>
+            <h3 class="paper-title">High-Dimensional Factor Models for Financial Extremes</h3>
+            <p class="paper-meta">with David Ardia and Debbie J. Dupuis</p>
           </li>
         </ol>
       </section>
