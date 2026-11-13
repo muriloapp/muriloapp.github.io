@@ -87,14 +87,18 @@
     }
 
     section {
-      margin-bottom: 46px;
+      margin-bottom: 40px;
     }
 
     h2 {
-      margin: 0 0 17px;
-      font-size: 1.16rem;
+      display: inline-block;
+      margin: 0 0 18px;
+      padding-bottom: 2px;
+      border-bottom: 1px solid var(--text);
+      font-size: 1.18rem;
       font-weight: 650;
       letter-spacing: -0.01em;
+      line-height: 1.35;
     }
 
     .interests {
@@ -108,61 +112,57 @@
     }
 
     .paper-list li {
-      padding-bottom: 20px;
+      padding: 0;
     }
 
     .paper-list li + li {
-      padding-top: 20px;
-      border-top: 1px solid var(--rule);
+      margin-top: 14px;
+    }
+
+    .paper-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: baseline;
     }
 
     .paper-title {
-      margin: 0 0 4px;
-      font-size: 1rem;
+      margin: 0 0 2px;
+      font-size: 1.02rem;
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 1.45;
+    }
+
+    .paper-title a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: #aebbc5;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+    }
+
+    .paper-title a:hover {
+      color: var(--link);
+      text-decoration-color: var(--link);
     }
 
     .paper-meta,
     .venue {
       margin: 0;
       color: var(--muted);
-      font-size: 0.93rem;
+      font-size: 0.92rem;
+      line-height: 1.5;
     }
 
     .venue {
       font-style: italic;
     }
 
-    .education-list {
-      display: grid;
-      gap: 18px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .education-list li {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .degree {
-      margin: 0;
-      font-weight: 600;
-    }
-
-    .school,
-    .date {
+    .paper-date {
       margin: 0;
       color: var(--muted);
-      font-size: 0.93rem;
-    }
-
-    .date {
-      flex: 0 0 auto;
-      padding-top: 2px;
+      font-size: 0.86rem;
+      font-variant-numeric: tabular-nums;
     }
 
     footer {
@@ -191,12 +191,9 @@
         content: none;
       }
 
-      .education-list li {
-        display: block;
-      }
-
-      .date {
-        margin-top: 2px;
+      .paper-row {
+        grid-template-columns: 1fr;
+        gap: 1px;
       }
     }
   </style>
@@ -225,11 +222,17 @@
         <h2 id="working-papers-title">Working papers</h2>
         <ol class="paper-list">
           <li>
-            <h3 class="paper-title">Sequential learning of multivariate dependence for systemic risk</h3>
+            <div class="paper-row">
+              <h3 class="paper-title"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7462758">Sequential learning of multivariate dependence for systemic risk</a></h3>
+              <time class="paper-date" datetime="2026">2026</time>
+            </div>
             <p class="paper-meta">with David Ardia and Debbie J. Dupuis</p>
           </li>
           <li>
-            <h3 class="paper-title">Peer Performance: Luck-Corrected Peer Performance Analysis in R</h3>
+            <div class="paper-row">
+              <h3 class="paper-title">Peer Performance: Luck-Corrected Peer Performance Analysis in R</h3>
+              <time class="paper-date" datetime="2026">2026</time>
+            </div>
             <p class="paper-meta">with David Ardia and Benjamin Seguin</p>
           </li>
         </ol>
@@ -239,31 +242,14 @@
         <h2 id="publication-title">Publication</h2>
         <ol class="paper-list">
           <li>
-            <h3 class="paper-title">Forecasting realized volatility using news flow</h3>
+            <div class="paper-row">
+              <h3 class="paper-title"><a href="https://www.sciencedirect.com/science/article/pii/S106297692500081X">Forecasting realized volatility using news flow</a></h3>
+              <time class="paper-date" datetime="2025">2025</time>
+            </div>
             <p class="paper-meta">with Marcelo Fernandes</p>
-            <p class="venue">Quarterly Review of Economics and Finance, 2025</p>
+            <p class="venue">The Quarterly Review of Economics and Finance, Volume 104</p>
           </li>
         </ol>
-      </section>
-
-      <section aria-labelledby="education-title">
-        <h2 id="education-title">Education</h2>
-        <ul class="education-list">
-          <li>
-            <div>
-              <p class="degree">PhD in Financial Engineering</p>
-              <p class="school">HEC Montréal</p>
-            </div>
-            <p class="date">2024–present</p>
-          </li>
-          <li>
-            <div>
-              <p class="degree">MSc in Economics</p>
-              <p class="school">São Paulo School of Economics, Fundação Getulio Vargas (FGV EESP)</p>
-            </div>
-            <p class="date">2020–2022</p>
-          </li>
-        </ul>
       </section>
     </main>
 
