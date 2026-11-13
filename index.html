@@ -4,287 +4,268 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic homepage of Murilo André Peres Pereira, PhD Candidate in Financial Engineering at HEC Montréal.">
-  <meta name="theme-color" content="#f7f5f1">
+  <meta name="theme-color" content="#ffffff">
   <title>Murilo André Peres Pereira</title>
   <style>
     :root {
-      --paper: #f7f5f1;
-      --ink: #17212b;
-      --muted: #5e6871;
-      --blue: #14628b;
-      --blue-dark: #0c4766;
-      --line: #d9d7d2;
-      --soft-blue: #e8f1f5;
+      --text: #1b1b1b;
+      --muted: #646464;
+      --link: #1d5075;
+      --rule: #e5e5e5;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.65;
       text-rendering: optimizeLegibility;
     }
 
     a {
-      color: var(--blue);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
-    }
-
-    a:hover {
-      color: var(--blue-dark);
-    }
-
-    a:focus-visible {
-      outline: 3px solid #92bfd5;
-      outline-offset: 4px;
-      border-radius: 2px;
-    }
-
-    .page {
-      width: min(760px, calc(100% - 48px));
-      margin: 0 auto;
-      padding: 72px 0 48px;
-    }
-
-    .layout {
-      display: block;
-    }
-
-    .profile {
-      position: static;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    h1 {
-      max-width: none;
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.9rem, 4.5vw, 2.75rem);
-      font-weight: 400;
-      letter-spacing: -0.035em;
-      line-height: 1.05;
-    }
-
-    .role {
-      margin: 20px 0 0;
-      font-size: 1rem;
-      line-height: 1.55;
-    }
-
-    .role strong {
-      display: block;
-      font-weight: 650;
-    }
-
-    .location {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-
-    main {
-      min-width: 0;
-      padding-top: 48px;
-    }
-
-    section {
-      padding: 0 0 52px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    section + section {
-      padding-top: 42px;
-    }
-
-    section:last-child {
-      border-bottom: 0;
-    }
-
-    h2 {
-      margin: 0 0 22px;
-      color: var(--blue);
-      font-size: 0.79rem;
-      font-weight: 750;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .education {
-      display: grid;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .education li {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3px;
-    }
-
-    .education .date {
-      color: var(--muted);
-      font-size: 0.86rem;
-      letter-spacing: 0.02em;
-    }
-
-    .education h3 {
-      margin: 0 0 4px;
-      font-size: 1.02rem;
-      font-weight: 680;
-      line-height: 1.45;
-    }
-
-    .education p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .interests {
-      display: block;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .interests li {
-      display: inline;
-      color: var(--ink);
-      font-size: 0.95rem;
-      line-height: 1.8;
-    }
-
-    .interests li:not(:last-child)::after {
-      content: " · ";
-      color: var(--muted);
-    }
-
-    .links {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 8px;
-      max-width: 420px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .links a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 13px 0;
-      border-bottom: 1px solid var(--line);
+      color: var(--link);
       text-decoration: none;
     }
 
-    .links a::after {
-      content: "↗";
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 3px;
+    }
+
+    .page {
+      width: min(720px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 72px 0 40px;
+    }
+
+    header {
+      margin-bottom: 56px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.9rem, 5vw, 2.35rem);
+      font-weight: 650;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+    }
+
+    .role {
+      margin: 12px 0 0;
+      font-size: 1rem;
+    }
+
+    .affiliation {
+      margin: 0;
       color: var(--muted);
-      font-size: 0.85rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 13px;
+      margin-top: 17px;
+      font-size: 0.94rem;
+    }
+
+    .contact a + a::before {
+      content: "·";
+      margin-right: 13px;
+      color: #a0a0a0;
+      text-decoration: none;
+    }
+
+    section {
+      margin-bottom: 46px;
+    }
+
+    h2 {
+      margin: 0 0 17px;
+      font-size: 1.16rem;
+      font-weight: 650;
+      letter-spacing: -0.01em;
+    }
+
+    .interests {
+      margin: 0;
+    }
+
+    .paper-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .paper-list li {
+      padding-bottom: 20px;
+    }
+
+    .paper-list li + li {
+      padding-top: 20px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .paper-title {
+      margin: 0 0 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .paper-meta,
+    .venue {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .venue {
+      font-style: italic;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .education-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .degree {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .school,
+    .date {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .date {
+      flex: 0 0 auto;
+      padding-top: 2px;
     }
 
     footer {
-      margin-top: 36px;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
       color: var(--muted);
-      font-size: 0.78rem;
+      font-size: 0.8rem;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 560px) {
       .page {
-        width: min(100% - 38px, 680px);
-        padding-top: 52px;
+        width: min(100% - 36px, 720px);
+        padding-top: 46px;
       }
 
-      .layout {
+      header {
+        margin-bottom: 44px;
+      }
+
+      .contact {
+        display: grid;
+        gap: 5px;
+      }
+
+      .contact a + a::before {
+        content: none;
+      }
+
+      .education-list li {
         display: block;
       }
 
-      .profile {
-        position: static;
-      }
-
-      h1 {
-        max-width: none;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
+      .date {
+        margin-top: 2px;
       }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <div class="layout">
-      <header class="profile">
-        <h1>Murilo André Peres Pereira</h1>
-        <p class="role">
-          <strong>PhD Candidate in Financial Engineering</strong>
-          HEC Montréal
-        </p>
-        <p class="location">Montréal, Québec, Canada</p>
-      </header>
+    <header>
+      <h1>Murilo André Peres Pereira</h1>
+      <p class="role">PhD Candidate in Financial Engineering</p>
+      <p class="affiliation">HEC Montréal · Montréal, Québec, Canada</p>
+      <nav class="contact" aria-label="Contact and profiles">
+        <a href="mailto:murilo-andre.peres-pereira@hec.ca">murilo-andre.peres-pereira@hec.ca</a>
+        <a href="https://www.gerad.ca/en/people/murilo-andre-peres-pereira">GERAD</a>
+        <a href="https://www.linkedin.com/in/muriloapp">LinkedIn</a>
+        <a href="https://github.com/muriloapp">GitHub</a>
+      </nav>
+    </header>
 
-      <main>
-        <section aria-labelledby="interests-title">
-          <h2 id="interests-title">Research interests</h2>
-          <ul class="interests">
-            <li>Financial econometrics</li>
-            <li>Extreme value analysis</li>
-            <li>Risk management</li>
-            <li>High-dimensional statistics</li>
-          </ul>
-        </section>
+    <main>
+      <section aria-labelledby="interests-title">
+        <h2 id="interests-title">Research interests</h2>
+        <p class="interests">Financial econometrics · Extreme value analysis · Risk management · High-dimensional statistics</p>
+      </section>
 
-        <section aria-labelledby="education-title">
-          <h2 id="education-title">Education</h2>
-          <ul class="education">
-            <li>
-              <span class="date">2024—present</span>
-              <div>
-                <h3>PhD in Financial Engineering</h3>
-                <p>HEC Montréal</p>
-              </div>
-            </li>
-            <li>
-              <span class="date">2020—2022</span>
-              <div>
-                <h3>MSc in Economics</h3>
-                <p>São Paulo School of Economics, Fundação Getulio Vargas (FGV EESP)</p>
-              </div>
-            </li>
-          </ul>
-        </section>
+      <section aria-labelledby="working-papers-title">
+        <h2 id="working-papers-title">Working papers</h2>
+        <ol class="paper-list">
+          <li>
+            <h3 class="paper-title">Sequential learning of multivariate dependence for systemic risk</h3>
+            <p class="paper-meta">with David Ardia and Debbie J. Dupuis</p>
+          </li>
+          <li>
+            <h3 class="paper-title">Peer Performance: Luck-Corrected Peer Performance Analysis in R</h3>
+            <p class="paper-meta">with David Ardia and Benjamin Seguin</p>
+          </li>
+        </ol>
+      </section>
 
-        <section aria-labelledby="links-title">
-          <h2 id="links-title">Contact &amp; links</h2>
-          <ul class="links">
-            <li><a href="mailto:murilo-andre.peres-pereira@hec.ca">murilo-andre.peres-pereira@hec.ca</a></li>
-            <li><a href="https://www.gerad.ca/en/people/murilo-andre-peres-pereira">GERAD</a></li>
-            <li><a href="https://www.linkedin.com/in/muriloapp">LinkedIn</a></li>
-            <li><a href="https://github.com/muriloapp">GitHub</a></li>
-          </ul>
-        </section>
-      </main>
-    </div>
+      <section aria-labelledby="publication-title">
+        <h2 id="publication-title">Publication</h2>
+        <ol class="paper-list">
+          <li>
+            <h3 class="paper-title">Forecasting realized volatility using news flow</h3>
+            <p class="paper-meta">with Marcelo Fernandes</p>
+            <p class="venue">Quarterly Review of Economics and Finance, 2025</p>
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <ul class="education-list">
+          <li>
+            <div>
+              <p class="degree">PhD in Financial Engineering</p>
+              <p class="school">HEC Montréal</p>
+            </div>
+            <p class="date">2024–present</p>
+          </li>
+          <li>
+            <div>
+              <p class="degree">MSc in Economics</p>
+              <p class="school">São Paulo School of Economics, Fundação Getulio Vargas (FGV EESP)</p>
+            </div>
+            <p class="date">2020–2022</p>
+          </li>
+        </ul>
+      </section>
+    </main>
 
     <footer>© 2026 Murilo André Peres Pereira</footer>
   </div>
