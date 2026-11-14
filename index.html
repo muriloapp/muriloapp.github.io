@@ -49,7 +49,7 @@
     .page {
       width: min(720px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 42px 0 40px;
+      padding: 110px 0 40px;
     }
 
     header {
@@ -57,8 +57,12 @@
     }
 
     .institution-logo {
+      position: absolute;
+      top: 10px;
+      left: 8px;
       display: inline-block;
-      margin-bottom: 30px;
+      margin: 0;
+      z-index: 1;
     }
 
     .institution-logo img {
@@ -172,7 +176,7 @@
     @media (max-width: 560px) {
       .page {
         width: min(100% - 36px, 720px);
-        padding-top: 32px;
+        padding-top: 91px;
       }
 
       header {
@@ -180,7 +184,8 @@
       }
 
       .institution-logo {
-        margin-bottom: 26px;
+        top: 8px;
+        left: 6px;
       }
 
       .institution-logo img {
