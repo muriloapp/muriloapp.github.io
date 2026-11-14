@@ -11,8 +11,9 @@
       --text: #1b1b1b;
       --muted: #646464;
       --link: #1d5075;
-      --paper: #005a84;
+      --paper: #002855;
       --paper-gap: 4px;
+      --content-indent: 12px;
       --rule: #e5e5e5;
     }
 
@@ -48,11 +49,22 @@
     .page {
       width: min(720px, calc(100% - 48px));
       margin: 0 auto;
-      padding: 72px 0 40px;
+      padding: 42px 0 40px;
     }
 
     header {
       margin-bottom: 56px;
+    }
+
+    .institution-logo {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .institution-logo img {
+      display: block;
+      width: 185px;
+      height: auto;
     }
 
     h1 {
@@ -101,11 +113,11 @@
     }
 
     .interests {
-      margin: 0;
+      margin: 0 0 0 var(--content-indent);
     }
 
     .paper-list {
-      margin: 0;
+      margin: 0 0 0 var(--content-indent);
       padding: 0;
       list-style: none;
     }
@@ -129,14 +141,14 @@
     .paper-title a {
       color: var(--paper);
       text-decoration: underline;
-      text-decoration-color: #6d98b0;
+      text-decoration-color: #627890;
       text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
 
     .paper-title a:hover {
-      color: #003f5e;
-      text-decoration-color: #003f5e;
+      color: #001b3a;
+      text-decoration-color: #001b3a;
     }
 
     .paper-meta {
@@ -160,11 +172,19 @@
     @media (max-width: 560px) {
       .page {
         width: min(100% - 36px, 720px);
-        padding-top: 46px;
+        padding-top: 32px;
       }
 
       header {
         margin-bottom: 44px;
+      }
+
+      .institution-logo {
+        margin-bottom: 26px;
+      }
+
+      .institution-logo img {
+        width: 165px;
       }
 
       .contact {
@@ -181,6 +201,9 @@
 <body>
   <div class="page">
     <header>
+      <a class="institution-logo" href="https://www.hec.ca/" aria-label="HEC Montréal">
+        <img src="logo-hec-montreal.svg" alt="HEC Montréal">
+      </a>
       <h1>Murilo André Peres Pereira</h1>
       <p class="role">PhD Candidate in Financial Engineering</p>
       <p class="affiliation">HEC Montréal · Montréal, Québec, Canada</p>
