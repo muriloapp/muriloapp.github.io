@@ -56,6 +56,19 @@
       margin-bottom: 56px;
     }
 
+    .header-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 132px;
+      column-gap: 36px;
+      align-items: start;
+    }
+
+    .identity {
+      grid-column: 1;
+      grid-row: 1;
+      min-width: 0;
+    }
+
     .institution-logo {
       position: absolute;
       top: 10px;
@@ -73,7 +86,7 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(1.9rem, 5vw, 2.35rem);
+      font-size: clamp(1.75rem, 4vw, 2.05rem);
       font-weight: 650;
       letter-spacing: -0.035em;
       line-height: 1.15;
@@ -90,18 +103,36 @@
     }
 
     .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px 13px;
+      grid-column: 1;
+      grid-row: 2;
+      display: grid;
+      justify-items: start;
+      gap: 1px;
       margin-top: 17px;
       font-size: 0.94rem;
+      line-height: 1.45;
     }
 
     .contact a + a::before {
-      content: "·";
-      margin-right: 13px;
-      color: #a0a0a0;
-      text-decoration: none;
+      content: none;
+    }
+
+    .profile-photo {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      width: 132px;
+      height: 150px;
+      margin: 0;
+      padding: 4px;
+      border: 1px solid var(--rule);
+      background: #ffffff;
+    }
+
+    .profile-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     section {
@@ -192,13 +223,26 @@
         width: 165px;
       }
 
-      .contact {
-        display: grid;
-        gap: 5px;
+      .header-layout {
+        grid-template-columns: minmax(0, 1fr) 104px;
+        column-gap: 20px;
       }
 
-      .contact a + a::before {
-        content: none;
+      h1 {
+        font-size: clamp(1.65rem, 7vw, 1.85rem);
+      }
+
+      .profile-photo {
+        grid-row: 1;
+        width: 104px;
+        height: 119px;
+        padding: 3px;
+      }
+
+      .contact {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        gap: 2px;
       }
     }
   </style>
@@ -209,15 +253,22 @@
       <a class="institution-logo" href="https://www.hec.ca/" aria-label="HEC Montréal">
         <img src="logo-hec-montreal.svg" alt="HEC Montréal">
       </a>
-      <h1>Murilo André Peres Pereira</h1>
-      <p class="role">PhD Candidate in Financial Engineering</p>
-      <p class="affiliation">HEC Montréal · Montréal, Québec, Canada</p>
-      <nav class="contact" aria-label="Contact and profiles">
-        <a href="mailto:murilo-andre.peres-pereira@hec.ca">murilo-andre.peres-pereira@hec.ca</a>
-        <a href="https://www.gerad.ca/en/people/murilo-andre-peres-pereira">GERAD</a>
-        <a href="https://www.linkedin.com/in/muriloapp">LinkedIn</a>
-        <a href="https://github.com/muriloapp">GitHub</a>
-      </nav>
+      <div class="header-layout">
+        <div class="identity">
+          <h1>Murilo André Peres Pereira</h1>
+          <p class="role">PhD Candidate in Financial Engineering</p>
+          <p class="affiliation">HEC Montréal · Montréal, Québec, Canada</p>
+        </div>
+        <nav class="contact" aria-label="Contact and profiles">
+          <a href="mailto:murilo-andre.peres-pereira@hec.ca">murilo-andre.peres-pereira@hec.ca</a>
+          <a href="https://www.gerad.ca/en/people/murilo-andre-peres-pereira">GERAD</a>
+          <a href="https://www.linkedin.com/in/muriloapp">LinkedIn</a>
+          <a href="https://github.com/muriloapp">GitHub</a>
+        </nav>
+        <figure class="profile-photo">
+          <img src="profile-murilo.jpg" alt="Portrait of Murilo André Peres Pereira">
+        </figure>
+      </div>
     </header>
 
     <main>
