@@ -227,18 +227,21 @@
       }
 
       .header-layout {
-        grid-template-columns: minmax(0, 1fr) 126px;
-        column-gap: 16px;
+        grid-template-columns: minmax(0, 1fr);
+        column-gap: 0;
       }
 
       h1 {
         font-size: clamp(1.65rem, 7vw, 1.85rem);
+        max-width: 300px;
       }
 
       .profile-photo {
-        grid-row: 1;
+        grid-column: 1;
+        grid-row: 3;
         width: 126px;
         height: 139px;
+        margin-top: 16px;
         padding: 0;
       }
 
